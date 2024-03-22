@@ -9,4 +9,94 @@
 table.order-table {
     margin: 0px 0px 0px 70px;
 }
+.shipping-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.sub-total-price {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.payment-options {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+
+}
+.place-order {
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-around;
+}
+img.bank-img {
+    height: 13px;
+    width: 30px;
+    gap: 10px;
+}
+
+.payment-image {
+    display: flex;
+    justify-content: space-around;
+    gap: 13px;
+ 
+    /* margin-top: 14px; */
+}
+.payment-image {
+    display: flex;
+    justify-content: space-around;
+    gap: 13px;
+    margin-left: 19%;
+}
+.cash-on {
+    display: flex;
+    margin-left: 19%;
+    
+}
+label.bank-detail {
+    margin-right: 100px;
+}
+.place-order {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    gap: 44px;
+    
+}
+button.place-order-final-btn {
+    padding: 7px;
+    width: 25%;
+    height: 33px;
+}
+.place-order-final {
+    display: flex;
+    margin-top: 21px;
+    margin-left: 20%;
+}
+input.place-order-input {
+    padding: 10px;
+    font-size: 14px;
+    flex-shrink: -3px;
+    height: 35px;
+    margin-left: -35px;
+}
+button.place-order-btn {
+    width: 113px;
+    padding: 8px;
+
+}
+
+
+input.form-fillup {
+    margin-top: 15px;
+    padding: 6px;
+    /* border: 1px solid gray; */
+    border: none;
+    background-color: #dddddd;
+    width: 200px;
+}
+
+
+
 

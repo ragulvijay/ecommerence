@@ -32,6 +32,10 @@ const handleSizeChange = (size) => {
     setQuantity(quantity + 1);
   };
 
+  const totalPrice =() =>{
+    return data. price* quantity;
+  }
+
 
   const decreaseQuantity = () => {
     if (quantity > 1) {
@@ -44,9 +48,10 @@ const handleBuyNow = () => {
     name:data.title,
     price: data.price,
     image: data.images,
+    totalPrice:totalPrice(data.price,quantity),
     quantity: quantity,
     Size :selectedSize,
-    Color:selectedColor,
+    colorOptions:selectedColor,
     description:data.description,
     category:data.category,
     }
@@ -114,7 +119,7 @@ useEffect(()=>{
         ))}
         <div className='color'>
 
-          
+
         </div>
         
       </div>
