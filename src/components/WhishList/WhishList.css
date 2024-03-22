@@ -1,0 +1,103 @@
+.wishlist-cards {
+    margin-top: 80px;
+    margin-left: 90px;
+}
+img.product-image-page {
+    height: 180px;
+    width: 180px;
+}
+.products-text {
+    display: flex;
+    gap: 17px;
+}
+.wishlist-items {
+    overflow: hidden;
+}
+img.wishlist-btn {
+    position: relative;
+    top: 17%;
+    left: 35%;
+    height: 35px;
+    
+}
+img.eye-btn {
+    position: relative;
+    top: 15%;
+    left: 37%;
+    height: 30px;
+    
+}
+h3.wishlist-title {
+    /* height: 42px; */
+    font-size: 11px;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+.wishlist-items {
+    overflow: hidden;
+    display: flex;
+    gap: 15px;
+}
+img.wishlist-image {
+    height: 200px;
+}
+
+button.add-btn-btn {
+    position: absolute;
+    top: 50%;
+    width: 180px ;  
+    margin-left: -90px;
+    padding: 9px;
+    color: white;
+    background-color: black;
+}
+.wishlist-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.eye-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+h3.product-title {
+    font-size: 12px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+button.wishlist-btn {
+    background-color: white;
+    padding: 5px;
+    width: 140px;
+    border: 1px solid gray;
+    margin-right: 5px;
+    cursor:pointer
+
+}
+img.delete-btn {
+    position: absolute;
+    /* right: 3px; */
+    /* left: 65px; */
+    /* margin-right: 28px; */
+    padding: 12px;
+    border: 1px solid;
+    border-radius: 100%;
+    background-color: white;
+    height: 38px;
+    width: 35px;
+    border: none;
+}
+.delete-img-text {
+    float: right;
+    margin-right: 40px;
+    /* margin-top: 14px; */
+}
+
+p.product-price {
+    font-size: 14px;
+    /* margin-bottom: 21px; */
+}

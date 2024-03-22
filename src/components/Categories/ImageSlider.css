@@ -1,0 +1,40 @@
+/* .slide.active {
+    background-repeat: no-repeat;
+    
+    height: 250px;
+}
+.next {
+    background-repeat: no-repeat;
+} */
+.slider-page {
+    margin-top: 60px;
+}
+button.prev {
+
+    margin-right: 14px;
+    padding: 10px;
+}
+.slides-image {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    margin-left: 7%;
+    margin-top: 15px;
+}
+img.slide-text {
+    height: 145px;
+    width: 170px;
+}
+button.next {
+ 
+    margin-left: 14px;
+    padding: 10px;
+}
+.category {
+    display: flex;
+    justify-content: space-around;
+    gap: 49%;
+}
+img.slide:hover {
+    background-color: #db4444;
+}

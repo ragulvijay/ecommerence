@@ -1,0 +1,132 @@
+section#cart-section {
+    margin-top: 78px;
+    margin-left: 3%;
+}
+.timing {
+    display: flex;
+    gap: 15px;
+}
+h3 {
+    margin-right: 50px;
+    margin-left: 1px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    display: flex;
+    font-family: cursive;
+}
+button.offer-btn {
+    position: absolute;
+    /* left: 3%; */
+    padding: 6px;
+    border: none;
+    border-radius: 10px;
+    gap: 9px;
+    background-color: #f98d8d;
+}
+p {
+    font-family: cursive;
+    margin-left: 10px;
+    font-size: 11px;
+    display: flex;
+}
+.product-name {
+    height: 80px;
+}
+.flash-sales {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    /* text-align: center; */
+    margin-left: 0px;
+    font-size: 17px;
+    font-weight: 800;
+    gap: 150px;
+}
+strong {
+    font-size: 35px;
+}
+span.sec {
+    font-size: 30px;
+}
+.arrows {
+    display: flex;
+    gap: 33px;
+    margin-left: 23%;
+    
+}
+.products {
+    display: flex;
+    gap: 22px;
+    overflow: hidden;
+
+    margin-top: 10px;
+}
+button.add-cart:hover {
+    background-color: aquamarine;
+}
+
+button.add-cart {
+    width: 200px;
+    height: 42px;
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    outline:none;
+    border-radius: 25px;
+    background-color: rgb(148, 199, 155);
+    margin-bottom: 5px;
+    
+}
+
+button.view-product-detail {
+    padding: 15px;
+    font-size: 18px;
+    width: 285px;
+    background-color: #1f1d1d;
+    font-weight: 500;
+    color: #09e7d5;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    bottom: 8px;
+    
+
+    
+}
+button.view-product {
+    padding: 15px;
+    font-size: 18px;
+    width: 285px;
+    background-color: #bf6464;
+    font-weight: 500;
+    color: #09e7d5;
+    border: none;
+    margin-top: 20px;
+    
+    
+}
+
+button.rightArrowStyle {
+    padding: 5px;
+    width: 35px;
+    height: 39px;
+    font-size: 20px;
+}
+button.leftArrowStyle {
+    padding: 5px;
+    width: 35px;
+    height: 39px;
+    font-size: 20px;
+}
+
+.product-image {
+    height: 300px;
+    width: 285px;
+    cursor: pointer;
+    object-fit: cover;
+}
+.product-image:hover  {
+    display: block;
+    z-index: 1;
+    
+}

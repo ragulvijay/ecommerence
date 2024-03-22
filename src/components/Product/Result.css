@@ -1,0 +1,8 @@
+.cart-img {
+    display: flex;
+    justify-content: space-around;
+}
+.cart-id {
+    display: flex;
+    justify-content: space-between;
+}

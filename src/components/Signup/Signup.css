@@ -1,0 +1,116 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+.conatainer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+}
+p.detail-below {
+    margin-left: 27%;
+    margin-right: 0px;
+}
+.conatainer-signup {
+    display: flex;
+    margin-top: 80px;
+}
+
+.account-login {
+    margin-left: 15px;
+}
+.card {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 56px;
+}
+
+img.sign-pic {
+    height: 450px;
+    width: 578px;
+    margin-top: 30px;
+
+}
+
+
+input.user-email-text {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    width: 235px;
+}
+.conatainer-signup {
+    display: flex;
+    align-items: center;
+}
+input.name-text {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    width: 235px;
+
+}
+input[type="name"] {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    width: 235px;
+}
+input[type="password"] {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    width: 235px;
+}
+button.sign-btn {
+    margin-top: 30px;
+}
+button.sign-btn {
+    margin-top: 30px;
+    width: 68%;
+    height: 35px;
+    background-color: #efb8b8;
+    border: ridge;
+    cursor: pointer;
+}
+.signup {
+
+    margin-left: 50px;
+    width: 400px;
+}
+h1 {
+    margin-bottom: 25px;
+    margin-right: 30px;
+}
+p {
+    margin-right: 66px;
+}
+.google-btn {
+    margin-top: 20px;
+    width: 68%;
+    cursor: pointer;
+    
+}
+input.input-type-text {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    width: 235px;
+}
+p.login-btn {
+    font-size: 15px;
+    margin-left: 51px;
+    margin-top: 15px;
+    width: 77%;
+}
+h1.create-account {
+    /* margin-right: 45px; */
+    margin-left: 10px;
+    margin-right: 0px;
+}

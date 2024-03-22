@@ -1,0 +1,86 @@
+section#category-section {
+    margin-top: 84px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+h1.experience {
+    margin-bottom: 25px;
+    margin-right: 30px;
+    font-size: 50px;
+    color: white;
+   
+}
+.music-container {
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.categoty-music {
+    display: flex;
+    background-color: #231d1d;
+    border: none;
+    border-radius: 5px;
+}
+button.buy-now {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 101px;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+button.buy-now:hover{
+    background-color:  #ff6b6b;
+}
+
+   
+img.boombox-image {
+    height: 380px;
+    /* width: 522px; */
+    padding: 30px;
+}
+h5.category-text {
+    display: flex;
+    margin-bottom: 15px;
+    /* margin-left: 45px; */
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    color: #0ff71e;
+}
+.timing-day {
+    color: black;
+    display: flex;
+    gap: 40px;
+    margin-left: 20px;
+}
+.day {
+    background-color: white;
+    padding: 15px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+.hour {
+    background-color: white;
+    padding: 15px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+
+}
+.minute {
+    background-color: white;
+    padding: 15px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+.second {
+    background-color: white;
+    padding: 15px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+
+}
+

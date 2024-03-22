@@ -1,0 +1,151 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  
+  }
+  
+
+  td, th {
+    text-align: left;
+    padding: 8px;
+  }
+
+.cursor {
+    cursor: pointer;
+}
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.list {
+    display: block;
+}
+th {
+    padding: 20px;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+}
+h5.text {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+td {
+    text-align: center;
+}
+input[type="number"] {
+    height: 40px;
+    width: 45px;
+    padding: 7px;
+}
+td.data-table {
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    justify-content: center;
+}
+img.monitor-im {
+    height: 30px;
+
+}
+.cart-total {
+    border:1px solid;
+    padding: 25px;
+}
+h5.total-code {
+    margin-bottom: 10px;
+}
+table {
+
+    width: 83%;
+    align-items: center;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+span.increase {
+    margin-right: 15px;
+}
+span.decrease {
+    margin-left: 15px;
+    font-size: 20px;
+}
+.shop-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    gap: 45%;
+}
+.input-coupon {
+    display: flex;
+    margin: 0px;
+}
+button.coupon-btn {
+    margin: 0px;
+}
+button.coupon-btn {
+    margin: 0px;
+    margin-left: 10px;
+}
+input.coupen-code-text {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 2px;
+}
+button.coupon-btn-btn {
+    height: 37px;
+    width: 140px;
+    padding: 8px;
+    border: none;
+    background-color: #e16d6d;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+.checkout-button {
+    height: 37px;
+    width: 140px;
+    padding: 8px;
+    border: none;
+    background-color: #e16d6d;
+    border-radius: 5px;
+
+}
+h5.total {
+    display: flex;
+    margin-bottom: 10px;
+}
+.total-price {
+    display: flex;
+    gap: 130px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid;
+}
+button.coupon-btn {
+    margin: 0px;
+    margin-left: 10px;
+    padding: 9px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(254, 99, 99);
+}
+.coupon-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 18%;
+}
+button.entroll-button {
+    padding: 10px;
+    width: 130px;
+    border: none;
+}
+span.quantity-check {
+    border: 1px solid;
+    padding: 8px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+

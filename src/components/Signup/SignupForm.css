@@ -1,0 +1,66 @@
+Filename: App.css
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+.form {
+    position: relative;
+    top: 80px;
+}
+
+
+.label {
+	display: block;
+	font-size: larger;
+	color: rgb(139, 83, 83);
+	padding: 5px;
+}
+
+.input {
+	font-size: larger;
+	padding: 13px;
+	margin: 2px;
+    border: none;
+    border-bottom: 1px solid;
+
+}
+input[type="text"] {
+    width: 240px;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn {
+	color: white;
+	background-color: red;
+	border-radius: 5px;
+	font-size: larger;
+	display: block;
+	padding: 5px;
+	margin: 10px auto;
+}
+
+.messages {
+	display: flex;
+	justify-content: center;
+}
+
+.error {
+	display: block;
+	background-color: red;
+	color: white;
+	width: fit-content;
+	height: 50px;
+	padding: 5px;
+}
+
+.success {
+	display: block;
+	background-color: lightblue;
+	color: black;
+	width: fit-content;
+	height: 50px;
+	padding: 5px;
+}

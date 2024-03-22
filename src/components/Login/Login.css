@@ -1,0 +1,56 @@
+.card {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+img.login-pic {
+    height: 450px;
+    width: 578px;
+    margin-top: 30px;
+}
+.card-content {
+    margin-left: 50px;
+    width: 400px;
+}
+.heading {
+    margin-bottom: 25px;
+
+    
+}
+.heading {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 0px; 
+    margin-left: 75px;
+}
+p.para {
+    /* margin-left: 15px; */
+    margin-bottom: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-left: 60px;
+    margin-right: 0px;
+}
+button.submit-btn {
+    margin-top: 28px;
+    margin-right: 50px;
+    height: 30px;
+    width: 67px;
+    background-color: #ec7f7f;
+    border: ridge;
+}
+span.forgot {
+    color: red;
+}
+input.username {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    width: 235px;
+}
+
+
+

@@ -1,0 +1,77 @@
+.user-edit-text {
+    margin-top: 80px;
+}
+.email-edit {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+.name-edit {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+input.password-change {
+    width: 460px;
+    padding: 10px;
+}
+button.cancel-profile {
+    padding: 10px;
+    width: 100px;
+    border: midnightblue;
+    border-radius: 5px;
+}
+button.save-profile {
+    padding: 9px;
+    width: 150px;
+    background-color: #d36868;
+    border: none;
+    border-radius: 5px;
+    margin-left: 6px;
+}
+.cancel-btn {
+    position: absolute;
+    left: 48%;
+}
+h4.user-edit {
+    margin-bottom: 12px;
+}
+input.edit-contact {
+    padding: 10px;
+    width: 200px;
+}
+input.email-text {
+    padding: 0px;
+}
+.edit-contact {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+.password-change {
+    display: inline-grid;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+h5.password-text {
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+h6.first-text {
+    display: flex;
+    margin-bottom: 8px;
+}
+h6.last-text {
+    display: flex;
+    margin-bottom: 8px;
+}
+h6.email-text {
+    display: flex;
+    margin-bottom: 6px;
+    margin-top: 15px;
+}
+h6.address-text {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}

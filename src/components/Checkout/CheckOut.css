@@ -1,0 +1,12 @@
+.checkout-container {
+    margin-top: 80px;
+}
+.checkout-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+table.order-table {
+    margin: 0px 0px 0px 70px;
+}
+

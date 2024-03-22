@@ -1,0 +1,174 @@
+section#newarrival-section {
+    margin-top: 80px;
+}
+.arrival-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.arrival-content-text {
+    display: flex;
+    gap: 15px;
+}
+.arrival-heading {
+    background: url(../assetes/playstation.png) no-repeat left top / cover;
+    height: 433px;
+    width: 430px;
+    background-color: black;
+    color: WHITE;
+}
+
+.arrival-content-heading {
+    background: url(../assetes/women.png) ;
+    height: 269px;
+    width: 600px;
+    margin-bottom: 15px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.arrival-content-text-heading {
+    background: url(../assetes/speaker.png);
+}
+.arrival-content-text-para {
+    background: url(../assetes/perfume.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 149px;
+    background-position: center;
+    background-color: black;
+    width: 305px;
+    color: white;
+}
+.playstation {
+    /* text-align: center; */
+    align-items: center;
+    /* display: flex; */
+    position: relative;
+    top: 64%;
+}
+h2.new-arrival-heading {
+    margin-right: 30px;
+    /* float: left; */
+    display: flex;
+    margin-left: 15px;
+}
+h2.arrival-playstation {
+    /* float: initial; */
+    display: flex;
+    margin-left: 20px;
+}
+p.arrival-para {
+    margin-left: 14px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    display: flex;
+    font-size: 15px;
+}
+h1.newarrival-heading {
+    display: flex;
+    margin-left: 7%;
+    font-size: 25px;
+}
+.women {
+    position: relative;
+    color: white;
+    top: 55%;
+    left: 0;
+}
+p.speaker-para {
+    margin-left: 8px;
+    font-size: 18px;
+}
+button.arrival-button {
+    float: left;
+    margin-left: 21px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid;
+    color: wheat;
+}
+.arrival-content-text-heading {
+    background-color: black;
+    background-repeat: no-repeat;
+    color: white;
+    background-position: center;
+    background-size: contain;
+}
+button.new-arrival-button {
+    /* float: initial; */
+    /* margin-left: 21px; */
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid;
+    color: wheat;
+    /* display: flex; */
+    /* align-items: center; */
+    /* text-align: center; */
+    position: relative;
+    right: 18%;
+    margin-top: 10px;
+}
+h2.new-arrival-heading {
+    margin-right: 30px;
+}
+p.new-arrival-para {
+    margin-right: 21px;
+    margin-top: -1px;
+    font-size: 20px;
+}
+h1.perfume-heading {
+    margin: 0;
+}
+.perfume-heading-text {
+    position: relative;
+    top: 45%;
+}
+h1.perfume-heading {
+    margin: 0;
+    /* float: left; */
+    display: flex;
+    margin-left: 10px;
+}
+
+button.perfume-button {
+    display: flex;
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid;
+    color: wheat;
+}
+h1.speaker-heading {
+    margin: 0;
+    display: flex;
+    margin-left: 10px;
+}
+
+button.speaker-button {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid;
+    color: wheat;
+}
+.speaker-heading-text {
+    position: relative;
+    top: 24%;
+}
+p.speaker-para {
+    margin-left: 0px;
+    display: flex;
+}
+p.perfume-para {
+    font-size: 12px;
+    /* margin-right: 41px; */
+    display: flex;
+}
+
+
+
