@@ -2,6 +2,9 @@ import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 import './Product.css';
 import {useNavigate} from 'react-router-dom';
+import card from '../assetes/card.png';
+import eye from '../assetes/eye.png';
+import WhishList from '../WhishList/WhishList';
 
 const Products = ({ addItemToCart }) => {
     const [product,setProduct]=useState([]);
@@ -11,6 +14,9 @@ const Products = ({ addItemToCart }) => {
     const showMinute=date.getMinutes()
     const showSecond=date.getSeconds()
     const navigate=useNavigate()
+    const [wishlist, setWishlist] = useState([]);
+
+    
  
     useEffect(()=>{
         axios.get(" https://api.escuelajs.co/api/v1/products")
@@ -22,6 +28,19 @@ const Products = ({ addItemToCart }) => {
           console.log(err)
         )
         },[]);
+
+
+        const addToWishlist = item => {
+          // Check if item is already in wishlist
+          if (!wishlist.some(i => i.id === item.id)) {
+            setWishlist([...wishlist, item]);
+            console.log(item);
+          }
+        };
+
+        const handleAddToWishlist = (id,title,images) => {
+          addToWishlist({ id, title, images });
+        };
         
     const handleChange = (id) => {
       navigate(`about/${id}`, { state: { id: id } });
@@ -45,6 +64,12 @@ const Products = ({ addItemToCart }) => {
             box.scrollLeft = box.scrollLeft + width;
             console.log(width)
           };
+          
+
+
+
+
+          
         
   return (
     <>
@@ -70,11 +95,15 @@ const Products = ({ addItemToCart }) => {
     </div>
     <div className='products'>
         {product.map((item,index)=>(
+            
+        
           <div className='add-btn'>
             <div className='product'  key={index}>
               
                 <img className='product-image' onClick={()=>handleChange(item?.id)} src={item?.images} alt="" />
-                <button className='view-product-detail' onClick={()=>addItemToCart(item)}>Add to Cart</button>
+                <span className='like-icon'><img className='like-wishlist' src={card}/></span>
+                <span className='eye-icon'><img className='eye-wishlit' src={eye}/></span>
+                 <button className='view-product-detail' onClick={()=>addItemToCart(item)}>Add to Cart</button>
                 <div className='product-name'>
                 <h3>{item.title}</h3>
                 <p>price:${item.price}</p>
@@ -87,10 +116,14 @@ const Products = ({ addItemToCart }) => {
         ))}
     </div>
     
+    
+    
     <div className='product-details'>
         <button className='view-product'>View All Product</button>
         </div>
+
     </section>
+    
     </>
   )
 }

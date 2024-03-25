@@ -11,12 +11,19 @@ import ippo from '../assetes/ippo.png';
 
 
 const CheckOut = () => {
+    const [isChecked, setIsChecked] = useState(false);
     const location = useLocation();
     const state = location.state;
     console.log(state);
  
 
     const [data,setData] = useState([]);
+
+    const handleCheckboxChange = () => {
+        setIsChecked(!isChecked);
+      };
+      
+    
 
     // useEffect(()=>{
     //     axios.get('https://api.escuelajs.co/api/v1/products')
@@ -48,6 +55,10 @@ const CheckOut = () => {
                 <input className='form-fillup' type='text' placeholder='City' /><br/>
                 <input className='form-fillup' type='text' placeholder='State' /><br/>
                 <input className='form-fillup' type='text' placeholder='Zip Code' /><br/>
+                <div className='checkbox-container'>
+                    <input type="checkbox" id="checkbox" name="checkbox" value="checkbox" onChange={handleCheckboxChange} />
+                    <label className='information-save' htmlFor="checkbox">Save this information for next time</label>
+                </div>
             </div>
         </div>
         <div className='order-summary'>

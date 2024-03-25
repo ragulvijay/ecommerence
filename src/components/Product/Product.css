@@ -23,6 +23,14 @@ button.offer-btn {
     gap: 9px;
     background-color: #f98d8d;
 }
+
+.like-wishlist {
+    position: relative;
+    top: -287px;
+    left: 47%;
+    height: 25px;
+    cursor: pointer;
+}
 p {
     font-family: cursive;
     margin-left: 10px;
@@ -31,6 +39,7 @@ p {
 }
 .product-name {
     height: 80px;
+    margin-top: -30px;
 }
 .flash-sales {
     display: flex;
@@ -77,6 +86,13 @@ button.add-cart {
     margin-bottom: 5px;
     
 }
+img.eye-wishlit {
+    position: relative;
+    top: -256px;
+    left: 38%;
+    height: 25px;
+    cursor: pointer;
+}
 
 button.view-product-detail {
     padding: 15px;
@@ -88,7 +104,7 @@ button.view-product-detail {
     border: none;
     cursor: pointer;
     position: relative;
-    bottom: 8px;
+    bottom: 43px;
     
 
     

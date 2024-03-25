@@ -20,12 +20,25 @@ const sizeOptions = ['S', 'M', 'L', 'XL'];
 const colorOptions = ['Red', 'Blue', 'Green', 'Yellow'];
 
 
-const handleSizeChange = (size) => {
+const handleSizeChange = (size,buttonId) => {
     setSelectedSize(size);
+    if (selectedSize === buttonId) {
+      
+      setSelectedSize(null);
+    } else {
+      
+      setSelectedColor(buttonId);
+    }
   };
+
+
+
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
+    
+    
+
   };
 
   const increaseQuantity = () => {
@@ -112,7 +125,7 @@ useEffect(()=>{
           <button className='size-btn'  
             key={index}
             onClick={() => handleSizeChange(size)}
-            style={{ marginRight: '10px' }}
+            style={{ marginRight: '10px', backgroundColor: selectedSize === size ? 'red' : 'gray' }} 
           >
             {size}
           </button>

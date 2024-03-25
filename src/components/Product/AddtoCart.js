@@ -60,5 +60,6 @@ const AddtoCart = () => {
   )
 }
 
+
 export default AddtoCart;
 
