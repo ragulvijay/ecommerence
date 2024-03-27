@@ -73,8 +73,6 @@ const Signup = () => {
       <div className='signup-img'>
         <img className='sign-pic' src={Image} alt="" />
       </div>
-      
-  
     <div>
       
       <h1 className='create-account'>Create an Account</h1>

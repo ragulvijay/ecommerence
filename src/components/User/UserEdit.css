@@ -1,4 +1,4 @@
-.user-edit-text {
+/* .user-edit-text {
     margin-top: 80px;
 }
 .email-edit {
@@ -74,4 +74,69 @@ h6.address-text {
     display: flex;
     margin-top: 15px;
     margin-bottom: 6px;
+} */
+
+.name {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+.user-edit-text {
+    margin-top: 80px;
+}
+.email-addres {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+input.email-order {
+    /* padding: 5px; */
+    height: 30px;
+    width: 200px;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 2px;
+    border-bottom: none;
+}
+input.name-order {
+    height: 30px;
+    width: 200px;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 2px;
+}
+input.password-order {
+    height: 30px;
+    width: 450px;
+    background-color: gainsboro;
+    border-radius: 2px;
+    padding: 4px;
+}
+h5.text-format {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+button.save-changes {
+    padding: 5px;
+    font-size:12px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(231, 80, 80);
+    height: 30px;
+    width: 100px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+button.cancel-btn {
+    padding: 5px;
+    font-size:12px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(231, 80, 80);
+    height: 30px;
+    width: 100px;
+    border-radius: 4px;
+
+
 }

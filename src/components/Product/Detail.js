@@ -42,7 +42,7 @@ const handleSizeChange = (size,buttonId) => {
   };
 
   const increaseQuantity = () => {
-    setQuantity(quantity + 1);
+    setQuantity(prev=> prev + 1);
   };
 
   const totalPrice =() =>{
@@ -52,7 +52,7 @@ const handleSizeChange = (size,buttonId) => {
 
   const decreaseQuantity = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1);
+      setQuantity(prev=> prev - 1);
     }}
  
 const handleBuyNow = () => {
@@ -61,7 +61,7 @@ const handleBuyNow = () => {
     name:data.title,
     price: data.price,
     image: data.images,
-    totalPrice:totalPrice(data.price,quantity),
+    totalPrice:totalPrice(),
     quantity: quantity,
     Size :selectedSize,
     colorOptions:selectedColor,

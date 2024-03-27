@@ -1,12 +1,22 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useRef, useState,useContext} from 'react';
 import axios from 'axios';
 import './Product.css';
 import {useNavigate} from 'react-router-dom';
 import card from '../assetes/card.png';
 import eye from '../assetes/eye.png';
 import WhishList from '../WhishList/WhishList';
+import { useLikes } from '../LikesContext';
 
-const Products = ({ addItemToCart }) => {
+
+const Products = ({ addItemToCart,id,name,title,price  }) => {
+  const sliderRef = useRef(null);
+
+  const { likedItems, toggleLike } = useLikes();
+  const isLiked = likedItems.includes(id);
+  console.log(likedItems)
+  
+
+  
     const [product,setProduct]=useState([]);
     const date = new Date();
     const showTime = date.getHours()
@@ -15,6 +25,9 @@ const Products = ({ addItemToCart }) => {
     const showSecond=date.getSeconds()
     const navigate=useNavigate()
     const [wishlist, setWishlist] = useState([]);
+
+    
+    
 
     
  
@@ -29,48 +42,30 @@ const Products = ({ addItemToCart }) => {
         )
         },[]);
 
-
-        const addToWishlist = item => {
-          // Check if item is already in wishlist
-          if (!wishlist.some(i => i.id === item.id)) {
-            setWishlist([...wishlist, item]);
-            console.log(item);
-          }
+        const goToNext = () => {
+          sliderRef.current.scrollLeft += sliderRef.current.offsetWidth;
+        };
+      
+        const goToPrevious = () => {
+          sliderRef.current.scrollLeft -= sliderRef.current.offsetWidth;
         };
 
-        const handleAddToWishlist = (id,title,images) => {
-          addToWishlist({ id, title, images });
-        };
-        
+
+       const addWishlist = (item) => {
+        setWishlist([...wishlist, item]);
+        console.log(wishlist)
+      }
+      const removeWishlist = (id) => {
+        setWishlist(wishlist.filter(item => item.id !== id));
+      }
+      
+
     const handleChange = (id) => {
       navigate(`about/${id}`, { state: { id: id } });
     };
-
-        let box = document.querySelector(".products")
-
-
-
-        
-        const goToPrevious = () => {
-            let width = box.clientWidth
-            box.scrollLeft = box.scrollLeft - width;
-            console.log(width)
-        
-        
-            
-          };
-          const goToNext = () => {
-            let width = box.clientWidth
-            box.scrollLeft = box.scrollLeft + width;
-            console.log(width)
-          };
+    
           
-
-
-
-
-          
-        
+  
   return (
     <>
     <section id='cart-section'>
@@ -93,17 +88,17 @@ const Products = ({ addItemToCart }) => {
         </button>
     </div>
     </div>
-    <div className='products'>
+    <div className='products' ref={sliderRef}>
         {product.map((item,index)=>(
             
         
           <div className='add-btn'>
             <div className='product'  key={index}>
-              
+              {name}
                 <img className='product-image' onClick={()=>handleChange(item?.id)} src={item?.images} alt="" />
-                <span className='like-icon'><img className='like-wishlist' src={card}/></span>
+                <span className='like-icon'><img className='like-wishlist' style={{color:isLiked ? 'red' : 'white'}} src={card} onClick={()=> toggleLike(item.id)}  alt='heart' /></span>
                 <span className='eye-icon'><img className='eye-wishlit' src={eye}/></span>
-                 <button className='view-product-detail' onClick={()=>addItemToCart(item)}>Add to Cart</button>
+                 <button className='view-product-detail' onClick={()=>addItemToCart(item)}  >Add to Cart</button>
                 <div className='product-name'>
                 <h3>{item.title}</h3>
                 <p>price:${item.price}</p>
@@ -126,6 +121,6 @@ const Products = ({ addItemToCart }) => {
     
     </>
   )
-}
+        }
 
 export default Products

@@ -18,39 +18,38 @@ import Admin from './Admin';
 import RequireAuth from './components/RequireAuth';
 import AdminRoute from './components/AdminRoute';
 import CheckOut from './components/Checkout/CheckOut';
+import WishList from './components/Product/WishList';
+import { LikesProvider } from '../src/components/LikesContext';
+
 
 function App() {
   return (
+    <LikesProvider>  
     <div className="App">
       <BrowserRouter>
-      <Header/>
-      
-        <Routes>
-        
+      <Header/>     
+        <Routes> 
+            
           <Route element={<RequireAuth />}>
-
           </Route>
           <Route path='/login' element={<Login/>} />
           <Route path='/admin' element={<Admin/>}/>
-
-
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/' element={<Home/>}/>
-          
+          <Route path='/wish' element={<WishList/>}/>
           <Route path='/result' element={<Result/>} />
           <Route path='about/:id' element={<Detail />} />
           <Route path='/cart' element={<AddCart/>} />
           <Route path='/edit' element={<UserEdit/>} />
           <Route path='/whishlist' element={<WhishList/>} />
-          <Route path='/checkout' element={<CheckOut/>} />
-         
+          <Route path='/checkout' element={<CheckOut/>} />      
           
-         
           </Routes>
           <Footer/>
           </BrowserRouter>
       
     </div>
+    </LikesProvider>
   );
 }
 

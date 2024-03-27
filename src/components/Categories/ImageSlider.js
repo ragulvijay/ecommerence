@@ -1,10 +1,11 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect, useRef} from 'react'
 
 import '../Categories/ImageSlider.css';
 import axios from 'axios';
 
 
 const ImageSlider = () => {
+  const sliderRef = useRef(null);
   const [image,setImage] = useState([]);
   useEffect(()=>{
     axios.get(" https://api.escuelajs.co/api/v1/products")
@@ -18,27 +19,14 @@ const ImageSlider = () => {
     },[]);
 
 
-    
-  
-
-  let box = document.querySelector(".slides-image")
-
-
-
+    const goToPrevious = ()=>{
+      sliderRef.current.scrollLeft -= sliderRef.current.offsetWidth;
+    }
+    const goToNext = ()=>{
+      sliderRef.current.scrollLeft += sliderRef.current.offsetWidth;
+    }
         
-  const goToPrevious = () => {
-      let width = box.clientWidth
-      box.scrollLeft = box.scrollLeft - width;
-      console.log(width)
   
-  
-      
-    };
-    const goToNext = () => {
-      let width = box.clientWidth
-      box.scrollLeft = box.scrollLeft + width;
-      console.log(width)
-    };
   
   return (
     <div className="slider-page">
