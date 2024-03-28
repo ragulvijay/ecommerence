@@ -6,20 +6,24 @@ const LikesContext = createContext();
 export const LikesProvider = ({ children }) => {
   const [likedItems, setLikedItems] = useState([]);
 
-  
 
   const toggleLike = (itemId) => {
     if (likedItems.includes(itemId)) {
       setLikedItems(likedItems.filter((id) => id !== itemId));
-      console.log(likedItems);
-    } else {
-      setLikedItems([...likedItems, itemId]);
-      console.log(likedItems);
+      
     }
+    
+    else {
+      setLikedItems([...likedItems, itemId]);
+      
+    }
+  };
+  const removeItem = (itemId) => {
+    setLikedItems(likedItems.filter((id) => id !== itemId));
   };
 
   return (
-    <LikesContext.Provider value={{ likedItems, toggleLike }}>
+    <LikesContext.Provider value={{ likedItems, toggleLike,removeItem }}>
       {children}
     </LikesContext.Provider>
   );

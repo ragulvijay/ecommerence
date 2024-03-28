@@ -6,16 +6,38 @@ import card from '../assetes/card.png';
 import eye from '../assetes/eye.png';
 import WhishList from '../WhishList/WhishList';
 import { useLikes } from '../LikesContext';
+import { useCart } from '../CartContext';
 
 
-const Products = ({ addItemToCart,id,name,title,price  }) => {
+const Products = ({ products,id  }) => {
   const sliderRef = useRef(null);
 
-  const { likedItems, toggleLike } = useLikes();
-  const isLiked = likedItems.includes(id);
-  console.log(likedItems)
+  const { toggleLike, likedItems } = useLikes();
+  const [liked, setLiked] = useState(likedItems.includes(id));
+
+  const handleLikeClick = (id) => {
+    toggleLike(id);
+    setLiked(!liked);
+  };
+
+  
+  const { addToCart } = useCart();
+
+    const handleAddToCart = (products) => {
+        addToCart(products);
+        console.log(products)
+    };
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = (product) => {
+        toggleLike(product);
+        setIsVisible(!isVisible);
+    };
+
   
 
+
+  
   
     const [product,setProduct]=useState([]);
     const date = new Date();
@@ -26,11 +48,6 @@ const Products = ({ addItemToCart,id,name,title,price  }) => {
     const navigate=useNavigate()
     const [wishlist, setWishlist] = useState([]);
 
-    
-    
-
-    
- 
     useEffect(()=>{
         axios.get(" https://api.escuelajs.co/api/v1/products")
         .then(res=>{
@@ -94,11 +111,11 @@ const Products = ({ addItemToCart,id,name,title,price  }) => {
         
           <div className='add-btn'>
             <div className='product'  key={index}>
-              {name}
+              
                 <img className='product-image' onClick={()=>handleChange(item?.id)} src={item?.images} alt="" />
-                <span className='like-icon'><img className='like-wishlist' style={{color:isLiked ? 'red' : 'white'}} src={card} onClick={()=> toggleLike(item.id)}  alt='heart' /></span>
-                <span className='eye-icon'><img className='eye-wishlit' src={eye}/></span>
-                 <button className='view-product-detail' onClick={()=>addItemToCart(item)}  >Add to Cart</button>
+                <span className='like-icon'><img className='like-wishlist' style={{backgroundColor:liked?"red":"white"}}   src={card} onClick={()=>handleLikeClick(item)}  alt='heart' /></span>
+                <span className='eye-icon'><img className='eye-wishlit'  src={eye}/></span>
+                 <button className='view-product-detail' onClick={()=>handleAddToCart(item)}  >Add to Cart</button>
                 <div className='product-name'>
                 <h3>{item.title}</h3>
                 <p>price:${item.price}</p>
@@ -107,6 +124,7 @@ const Products = ({ addItemToCart,id,name,title,price  }) => {
                 </div>
             </div>
            
+
             </div>
         ))}
     </div>

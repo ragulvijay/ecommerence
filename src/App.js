@@ -6,7 +6,7 @@ import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
 import Signup from './components/Signup/Signup';
 
-
+import { CartProvider } from '../src/components/CartContext';
 import {BrowserRouter,Route,Routes} from 'react-router-dom';
 import Home from './components/Home';
 import Result from './components/Product/Result';
@@ -24,6 +24,7 @@ import { LikesProvider } from '../src/components/LikesContext';
 
 function App() {
   return (
+    <CartProvider>
     <LikesProvider>  
     <div className="App">
       <BrowserRouter>
@@ -50,6 +51,7 @@ function App() {
       
     </div>
     </LikesProvider>
+    </CartProvider>
   );
 }
 

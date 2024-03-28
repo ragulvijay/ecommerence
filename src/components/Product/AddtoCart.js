@@ -18,32 +18,13 @@ const AddtoCart = () => {
     }
   };
 
-  // Function to remove item from the cart
+
   const removeItemFromCart = (productId) => {
     const updatedCart = cart.filter(item => item.id !== productId);
     setCart(updatedCart);
   };
 
-  const increaseQuantity = (productId) => {
-    const updatedCart = cart.map(item => {
-      if (item.id === productId) {
-        return { ...item, quantity: item.quantity + 1 };
-      }
-      return item;
-    });
-    setCart(updatedCart);
-  };
-
   
-  const decreaseQuantity = (productId) => {
-    const updatedCart = cart.map(item => {
-      if (item.id === productId && item.quantity > 1) {
-        return { ...item, quantity: item.quantity - 1 };
-      }
-      return item;
-    });
-    setCart(updatedCart);
-  };
   
     
     
@@ -52,10 +33,10 @@ const AddtoCart = () => {
     <div>
     
       <Header size={cart?.length} />
-       <Products addItemToCart={addItemToCart} /><AddCart cart={cart}
+       <Products addItemToCart={addItemToCart} />
+       <AddCart cart={cart}
           removeItemFromCart={removeItemFromCart}
-          increaseQuantity={increaseQuantity}
-          decreaseQuantity={decreaseQuantity}/>
+          ></AddCart>
     </div>
   )
 }

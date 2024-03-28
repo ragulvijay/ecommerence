@@ -15,11 +15,12 @@ img.product-image-page {
 }
 img.wishlist-btn {
     position: relative;
-    top: 17%;
-    left: 35%;
     height: 35px;
-    
+    left: 37%;
+    top: 18%;
 }
+
+
 img.eye-btn {
     position: relative;
     top: 15%;
@@ -39,8 +40,14 @@ h3.wishlist-title {
     gap: 15px;
 }
 img.wishlist-image {
-    height: 200px;
+    width: 200px;
+    display: flex;
 }
+.wishlist-item {
+    height: 300px;
+    width: 200px;
+}
+
 
 button.add-btn-btn {
     position: absolute;

@@ -2,7 +2,7 @@ import React from 'react'
 import AddtoCart from './Product/AddtoCart';
 import ImageSlider from './Categories/ImageSlider';
 import Slider from './Slider/Slider';
-
+import Products from './Product/Products';
 import CustomerService from './Customer/CustomerService';
 import Music from './MusicCategories/Music';
 import NewArrival from './NewArrival/NewArrival';
@@ -16,7 +16,7 @@ function Home() {
         
         </section>
         <section id='Product-section-item'>
-            <AddtoCart/>
+            <Products/>
         </section>
         <section id='Category-section'>
             <ImageSlider/>
