@@ -6,10 +6,12 @@ import Vector from '../assetes/Vector.png' ;
 import {useNavigate} from 'react-router-dom';
 import './Header.css'
 import Slider from '../Slider/Slider';
+import { useCart } from '../CartContext';
 
 
 
-const  Header = ({size})=> {
+const  Header = ()=> {
+  const { cartItems } = useCart();
     const navigate=useNavigate();
     const [isOpen, setIsOpen] = useState(false);
     
@@ -67,7 +69,7 @@ const UserDetails = () => {
                     <span><img className='vector-img' src={Vector} alt='cart'/></span>
                     <img className='wishlist' src={Wishlist} alt='wishlist' onClick={()=>navigate("/whishlist")} />
                     
-                   <img className='cart' onClick={openCartPage}  src={Cart} alt='cart' /><span>{size}</span>
+                   <img className='cart' onClick={openCartPage}  src={Cart} alt='cart' /><span>{cartItems.length}</span>
                     <img className='user' onClick={handleClick} src={user} alt='user' />
                     {isOpen && <UserDetails />}
                     

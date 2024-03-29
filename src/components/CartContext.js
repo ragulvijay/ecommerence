@@ -7,32 +7,31 @@ export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
     const addToCart = (item) => {
+        item.quantity=1;
+        
         setCartItems([...cartItems, item]);
     };
 
-    const removeItemFromCart = (index) => {
-        const updatedCart = [...cartItems];
-        updatedCart.splice(index, 1);
-        setCartItems(updatedCart);
-    };
+    const removeItemFromCart = (itemId) => {
+      const updatedCartItems = cartItems.filter(item => item.id !== itemId);
+      setCartItems(updatedCartItems);
+      };
+      
 
-    const increaseQuantity = (index) => {
-        let updatedCart = [...cartItems];
-        updatedCart [ index ]. quantity++;
-        setCartItems (updatedCart);
-        console.log(updatedCart);
-        };
-    const decreaseQuantity = (index) => {
-        let updatedCart = [ ...cartItems ];
-        updatedCart [ index ]. quantity--;
-        setCartItems (updatedCart);
-        console.log(updatedCart);
-        }
-
-
+    const  handleIncreaseQuantity = (itemId) => {
+        setCartItems(cartItems.map(item => 
+          item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
+        ));
+      };
+    
+      const handleDecreaseQuantity = (itemId) => {
+        setCartItems(cartItems.map(item =>
+          item.id === itemId && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
+        ));
+      };
 
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, removeItemFromCart,increaseQuantity,decreaseQuantity }}>
+        <CartContext.Provider value={{ cartItems, addToCart, removeItemFromCart,handleIncreaseQuantity,handleDecreaseQuantity }}>
             {children}
         </CartContext.Provider>
     );

@@ -3,9 +3,9 @@ import '../Cart/Cart.css';
 import { useCart } from '../CartContext';
 
 const AddCart = () => {  
-  const { cartItems, removeItemFromCart,increaseQuantity,decreaseQuantity ,item} = useCart();
+  const { cartItems, removeItemFromCart,handleIncreaseQuantity,handleDecreaseQuantity,item} = useCart();
   
-  console.log(cartItems);
+  
 
   const [total, setTotal] = useState(0);
   const [coupon, setCoupon] = useState('');
@@ -13,6 +13,7 @@ const AddCart = () => {
   const handleCouponChange = (e) => {
     setCoupon(e.target.value);
   }
+
   
   const ProcessCheckout  = async()=> {
     const response = await fetch('https://api.escuelajs.co/api/v1/products/', {
@@ -22,18 +23,20 @@ const AddCart = () => {
       },
       body: JSON.stringify({
         items: cartItems,
+        
         coupon: coupon,
       }),
     });
 
     const data = await response.json();
-    console.log(data);
+    
   }
 
   
 
-  
 
+  
+  console.log(cartItems)
 
   return (
     <>
@@ -51,14 +54,15 @@ const AddCart = () => {
         </thead>
         <tbody>
           {cartItems?.map((item ) => (
+            
             <tr key={item?.id}>
               
               <td className='data-table'><img src={item?.images} alt={item.title} style={{ width: '100px' }} /></td>
               <td><p>{item?.title}</p></td>
               
-              <td><p>${(item.price * item.quantity).toFixed(2)}</p></td>
-              <td className='cursor'><span className='quantity-check'><span className='increase' onClick={()=>increaseQuantity(item?.id)}>+</span><span>{item.quantity}</span>
-              <span className='decrease' onClick={()=>decreaseQuantity(item?.id)} disabled={item.quantity === 1}>-</span></span></td>
+              <td><p>${(item?.price * item.quantity).toFixed(2)}</p></td>
+              <td className='cursor'><span className='quantity-check'><span className='increase' onClick={()=>handleIncreaseQuantity(item.id)}>+</span><span>{item?.quantity}</span>
+              <span className='decrease' onClick={()=>handleDecreaseQuantity(item.id)} disabled={item.quantity === 1}>-</span></span></td>
               
               <td><button onClick={() => removeItemFromCart(item?.id)}>Remove</button></td>
             </tr>

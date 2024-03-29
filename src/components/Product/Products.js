@@ -13,32 +13,32 @@ const Products = ({ products,id  }) => {
   const sliderRef = useRef(null);
 
   const { toggleLike, likedItems } = useLikes();
-  const [liked, setLiked] = useState(likedItems.includes(id));
+  const [liked, setLiked] = useState(false);
+
+  useEffect (()=>{
+
+    setLiked(likedItems.includes(id));
+    console.log(likedItems)
+    },[liked])
 
   const handleLikeClick = (id) => {
     toggleLike(id);
-    setLiked(!liked);
-  };
+    setLiked((liked)=>!liked);
+    console.log(likedItems)
+    console.log(id)
+    console.log(!liked)
+  }
+
+
+
 
   
-  const { addToCart } = useCart();
-
-    const handleAddToCart = (products) => {
-        addToCart(products);
-        console.log(products)
+    const { addToCart } = useCart();
+    const handleAddToCart  = (products) => {
+      products.quantity=1;
+      addToCart(products);
+        
     };
-    const [isVisible, setIsVisible] = useState(false);
-
-    const toggleVisibility = (product) => {
-        toggleLike(product);
-        setIsVisible(!isVisible);
-    };
-
-  
-
-
-  
-  
     const [product,setProduct]=useState([]);
     const date = new Date();
     const showTime = date.getHours()
@@ -113,7 +113,7 @@ const Products = ({ products,id  }) => {
             <div className='product'  key={index}>
               
                 <img className='product-image' onClick={()=>handleChange(item?.id)} src={item?.images} alt="" />
-                <span className='like-icon'><img className='like-wishlist' style={{backgroundColor:liked?"red":"white"}}   src={card} onClick={()=>handleLikeClick(item)}  alt='heart' /></span>
+                <span className='like-icon'><img className='like-wishlist' style={{color:liked?"red":"white"}}   src={card} onClick={()=>handleLikeClick(item)}  alt='heart' /></span>
                 <span className='eye-icon'><img className='eye-wishlit'  src={eye}/></span>
                  <button className='view-product-detail' onClick={()=>handleAddToCart(item)}  >Add to Cart</button>
                 <div className='product-name'>

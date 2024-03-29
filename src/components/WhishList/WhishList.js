@@ -9,7 +9,7 @@ const WishlistPage = () => {
   const { likedItems,item,removeItem } = useLikes();
   const navigate=useNavigate();
   const handleRemoveItem = (id) => {
-    removeItem(id);
+    likedItems.filter((item) => item.id !== id);
   };
 
   
@@ -30,7 +30,7 @@ const WishlistPage = () => {
   {likedItems?.map((item)=>(
 
     <div className='wishlist-item' key={item}>
-      <img className='wishlist-btn' src={remove} alt="" data-id={item.id}  onClick={() => handleRemoveItem(item)}/>
+      <img className='wishlist-btn' src={remove} alt="" data-id={item.id}  onClick={() => removeItem(item)}/>
       <img className='wishlist-image' src={item?.images} alt="wish-image" />
       <h3 className='wishlist-title'>{item?.title}</h3>
       <p className='wishlist-price'>${item?.price}</p>

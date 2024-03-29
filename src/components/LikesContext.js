@@ -7,17 +7,16 @@ export const LikesProvider = ({ children }) => {
   const [likedItems, setLikedItems] = useState([]);
 
 
-  const toggleLike = (itemId) => {
-    if (likedItems.includes(itemId)) {
-      setLikedItems(likedItems.filter((id) => id !== itemId));
-      
-    }
-    
-    else {
-      setLikedItems([...likedItems, itemId]);
-      
-    }
+  const toggleLike = (productId) => {
+    setLikedItems((prevLikedItems) => {
+      if (prevLikedItems.includes(productId)) {
+        return prevLikedItems.filter((id) => id !== productId);
+      } else {
+        return [...prevLikedItems, productId];
+      }
+    });
   };
+   
   const removeItem = (itemId) => {
     setLikedItems(likedItems.filter((id) => id !== itemId));
   };
